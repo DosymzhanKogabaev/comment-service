@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=/comment-service/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
     <script>
-      // Redirect to index.html for any 404s to allow client-side routing
-      var pathname = window.location.pathname;
-      var newPathname = '/comment-service' + pathname;
-      window.history.replaceState({}, '', newPathname);
-      window.location.replace('/comment-service/');
+      // Get the current path
+      var path = window.location.pathname;
+      // Check if path starts with the base path of the project (GitHub Pages subdirectory)
+      var basePath = '/comment-service';
+
+      if (path.startsWith(basePath)) {
+        // Preserve the route path and redirect to index.html with the original path
+        var newUrl = basePath + '/#' + path.replace(basePath, '');
+        window.location.replace(newUrl);
+      } else {
+        // Fallback to base path if no route matches
+        window.location.replace(basePath);
+      }
     </script>
   </head>
   <body></body>

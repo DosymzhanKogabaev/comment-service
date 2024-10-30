@@ -1,7 +1,7 @@
 import axios from "axios";
 import bcrypt from 'bcryptjs' 
 
-const url = 'http://localhost:3001'
+const url = 'https://comment-service-backend.onrender.com'
 
 export async function getCompaniesList() {
     const res = await axios.get(`${url}/companies`)

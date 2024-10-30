@@ -93,7 +93,7 @@ const CompanyProfilePage = () => {
         description: description
       })
       const res = await axios.patch(
-        `http://localhost:3001/companies/${company._id}`,
+        `https://comment-service-backend.onrender.com/companies/${company._id}`,
         obj
       );
       localStorage.setItem('company', JSON.stringify(res.data))

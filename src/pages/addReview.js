@@ -117,7 +117,7 @@ const AddReview = () => {
       let isSuccessful = false;
       try {
         setIsLoading(true);
-        const res = await axios.post("http://localhost:3001/comments", {
+        const res = await axios.post("https://comment-service-backend.onrender.com/comments", {
           authorId: author._id,
           toId: selectedCompany._id,
           description: description,

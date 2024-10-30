@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const api = 'http://localhost:3001'
+const api = 'https://comment-service-backend.onrender.com'
 export const loginCompany = createAsyncThunk(
     'companies/signIn',
     async(companyCredentials) => {
